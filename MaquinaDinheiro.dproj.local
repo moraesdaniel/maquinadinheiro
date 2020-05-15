@@ -4,8 +4,15 @@
     <Transaction>2020/05/05 17:01:24.000.717,=C:\Users\Free\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2020/05/09 12:53:36.000.971,=C:\Users\Free\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2020/05/15 08:34:08.000.538,=C:\Users\Free\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2020/05/15 08:46:44.000.634,C:\Users\Free\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Daniel Moraes\MaquinaDinheiro\uFrmMaquinaDinheiro.dfm</Transaction>
-    <Transaction>2020/05/15 08:46:44.000.634,C:\Users\Free\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Daniel Moraes\MaquinaDinheiro\uFrmMaquinaDinheiro.pas</Transaction>
-    <Transaction>2020/05/15 08:46:54.000.898,C:\Users\Free\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Daniel Moraes\MaquinaDinheiro\MaquinaDinheiro.dproj</Transaction>
+    <Transaction>2020/05/15 08:46:44.000.634,C:\Daniel Moraes\MaquinaDinheiro\uFrmMaquinaDinheiro.pas=C:\Users\Free\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/05/15 08:46:44.000.634,C:\Daniel Moraes\MaquinaDinheiro\uFrmMaquinaDinheiro.dfm=C:\Users\Free\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/05/15 08:46:54.000.898,C:\Daniel Moraes\MaquinaDinheiro\MaquinaDinheiro.dproj=C:\Users\Free\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/05/15 09:12:45.583,=C:\Daniel Moraes\MaquinaDinheiro\Unit1.pas</Transaction>
+    <Transaction>2020/05/15 09:13:33.460,C:\Daniel Moraes\MaquinaDinheiro\uICalculadora.pas=C:\Daniel Moraes\MaquinaDinheiro\Unit1.pas</Transaction>
+    <Transaction>2020/05/15 09:19:50.543,=C:\Daniel Moraes\MaquinaDinheiro\Unit1.pas</Transaction>
+    <Transaction>2020/05/15 09:20:03.337,C:\Daniel Moraes\MaquinaDinheiro\uMaquinaDinheiro.pas=C:\Daniel Moraes\MaquinaDinheiro\Unit1.pas</Transaction>
+    <Transaction>2020/05/15 09:21:15.464,C:\Daniel Moraes\MaquinaDinheiro\uIMaquina.pas=C:\Daniel Moraes\MaquinaDinheiro\uICalculadora.pas</Transaction>
+    <Transaction>2020/05/15 09:32:25.471,=C:\Daniel Moraes\MaquinaDinheiro\Unit1.pas</Transaction>
+    <Transaction>2020/05/15 09:32:36.562,C:\Daniel Moraes\MaquinaDinheiro\uTroco.pas=C:\Daniel Moraes\MaquinaDinheiro\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

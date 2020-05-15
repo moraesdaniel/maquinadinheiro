@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
-  Vcl.Grids, Vcl.StdCtrls, Vcl.ExtCtrls, System.StrUtils;
+  Vcl.Grids, Vcl.StdCtrls, Vcl.ExtCtrls, System.StrUtils, uTroco,
+  System.Generics.Collections, uMaquinaDinheiro;
 
 type
   TfrmMaquinaDinheiro = class(TForm)
@@ -16,10 +17,13 @@ type
     procedure edtTrocoChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnTrocoClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     bFormatando: Boolean;
+    listaTroco: TList<TTroco>;
     function FormatarMoeda(sValor: String) : String;
     procedure FormatarGridTroco;
+    procedure CalcularTroco;
     { Private declarations }
   public
     { Public declarations }
@@ -40,6 +44,33 @@ begin
     MessageDlg('O valor do troco deve ser maior que zero!', mtWarning, [mbok], 0);
     edtTroco.SetFocus;
     Exit;
+  end;
+
+  CalcularTroco();
+end;
+
+procedure TfrmMaquinaDinheiro.CalcularTroco;
+var
+  oMaquinaDinheiro: TMaquinaDinheiro;
+  dTroco: Double;
+  iCont: Integer;
+begin
+  oMaquinaDinheiro := TMaquinaDinheiro.Create;
+  try
+    dTroco := StrToFloat(ReplaceStr(edtTroco.Text, '.', ''));
+    listaTroco := oMaquinaDinheiro.MontarTroco(dTroco);
+
+    strgridTroco.RowCount := 1;
+
+    for iCont := 0 to listaTroco.Count - 1 do begin
+      if (listaTroco[iCont].Quantidade > 0) then begin
+        strgridTroco.RowCount := strgridTroco.RowCount + 1;
+        strgridTroco.Cells[0, strgridTroco.RowCount - 1] := listaTroco[iCont].Cedula;
+        strgridTroco.Cells[1, strgridTroco.RowCount - 1] := IntToStr(listaTroco[iCont].Quantidade);
+      end;
+    end;
+  finally
+    FreeAndNil(oMaquinaDinheiro);
   end;
 end;
 
@@ -95,6 +126,11 @@ end;
 procedure TfrmMaquinaDinheiro.FormCreate(Sender: TObject);
 begin
   FormatarGridTroco();
+end;
+
+procedure TfrmMaquinaDinheiro.FormDestroy(Sender: TObject);
+begin
+  listaTroco := nil;
 end;
 
 end.
